@@ -1,0 +1,5 @@
+ng new my-first-app           // To initialize angular project
+ng serve                      // To compile and start working with application
+ng generate component servers // To create(generate) new angular components
+ng g c servers                // Does the same as the command before this
+
