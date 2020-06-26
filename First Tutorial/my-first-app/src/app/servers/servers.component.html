@@ -34,6 +34,24 @@ First way of binding data
     * Changing HTML using property binding.
 -->
 <!--<p [innerText]="allowNewServer"></p>-->
-<p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<!--<p>{{ serverCreationStatus }}</p>-->
+<!--
+  DOM structural directives:
+    - <#DOMelement *ngIf="(boolean-expression);*ngelse #(referingName)">
+      * <ng-template #(referingName)>
+      * </ng-template>
+    - <#DOMelement *ngFor=""
+-->
+
+<!--
+<p *ngIf="serverCreated; else noserver">Server was created, server name is {{ serverName }}</p>
+<ng-template #noserver>
+  <p>No server was created</p>
+</ng-template>
+-->
+
+
+<app-server *ngFor="let server of servers">
+  
+</app-server>
+

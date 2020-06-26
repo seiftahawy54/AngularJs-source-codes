@@ -9,7 +9,16 @@
     * Any statement returns a string.
     * Ternary expression
 -->
-<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+
+<!--
+  Style directives:
+    ngStyle: changing the style dynamically depending on some conditions or statically
+    ngClass: add or certain classes in somehow condition is true
+-->
+<p
+  [ngStyle]="{'background-color': getColor()}"
+  [ngClass]="{online: serverStatus === 'Online'}"
+>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
 
 
 <!--
